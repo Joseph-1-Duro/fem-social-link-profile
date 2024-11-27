@@ -1,0 +1,120 @@
+:root {
+    --green: hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey-700: hsl(0, 0%, 20%);
+    --grey-800: hsl(0, 0%, 12%);
+    --grey-900: hsl(0, 0%, 8%);
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
+    src: local('./assets/fonts/Inter-VariableFont_slnt,wght.ttf');
+}
+
+html {
+    font: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+h1 {
+    line-height: 1.1;
+}
+
+body {
+    line-height: 1.5;
+    background-color: var(--grey-900);
+    font-family: 'Inter', sans-serif;
+}
+
+main {
+    min-height: 100dvh;
+    display: grid;
+    place-content: center;
+}
+
+.card {
+    background-color: var(--grey-800);
+    border-radius: 5px;
+    padding: 32px 20px 20px;
+    text-align: center;
+    min-width: 320px;
+}
+
+.card__avatar {
+    border-radius: 50%;
+    width: 64px;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+}
+
+.card__title h1 {
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+.card__title p {
+    color: var(--green);
+    font-weight: 600
+}
+
+.card__title {
+    margin-bottom: 1rem;
+}
+
+.card__quote {
+    color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.card__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+} 
+
+.card__links a {
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 14px 0;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--grey-700);
+    transition-property: background-color, color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
+}
+
+.card__links a:hover {
+    background-color: var(--green);
+    color: var(--grey-900);
+}
+
+
+@media screen and (width >= 48em) {
+    .card {
+        width: 360px;
+        padding: 40px 32px 20px;
+    }
+}
